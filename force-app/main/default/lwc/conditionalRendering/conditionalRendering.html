@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Conditional Rendering">
+        <div class="slds-var-m-around_medium">
+            <lightning-button class="slds-var-m-left_x-small" 
+                              variant="brand" 
+                              label="Show data" 
+                              title="Show data"
+                              onclick={handleClick}>
+            </lightning-button>
+            <template if:true={isVisible}>
+                <div>Message after clicking to check conditional Rendering</div>
+            </template>
+            <template if:false={isVisible}>
+                <div>To see data, please click the button above</div>
+            </template>
+            <lightning-input type="text" label="Write vamos in the input field to see the data"
+                        onkeyup={changeHandler}>
+            </lightning-input>
+            <template if:true={vamosMethod}>
+                <div>
+                    Hooorey! You have type correctly.
+                </div>
+            </template> 
+        </div>
+    </lightning-card>
+    <lightning-card title="Template Looping - for:each Directive">
+        
+    </lightning-card>       
+</template>
